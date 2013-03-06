@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Propertymanagement</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+		 
+		       This is the Header		 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Naviagtion -->
+         <div id="navigation">
+		 
+		 <%= link_to 'Login', new_user_session_path %>
+		 <%= link_to 'Register', new_user_path %>
+		 <%= link_to 'Properties', properties_path %> 
+		 <%= link_to 'Units', units_path %>
+		 <%= link_to 'Leases', leases_path %>
+		 <%= link_to 'RepairRequest', new_repair_request_path %>
+		  
+		 
+		
+		 
+			   
+		 </div>
+		 <!-- End Naviagtion -->
+
+
+
+		 <!-- Begin Content -->
+		 <div id="content">
+		       
+	     	 
+		 
+<%= yield %>
+ 
+		 </div>
+		 <!-- End Content -->
+		 
+		 <!-- Begin Footer -->
+		 <div id="footer">
+		       
+			   This is the Footer		
+			    
+	     </div>
+		 <!-- End Footer -->
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+
+
+
+</body>
+</html>
